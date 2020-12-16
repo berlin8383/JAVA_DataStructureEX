@@ -1,41 +1,41 @@
-package com.berlin83.chap04;
+package chap04;
 /*
- * intÇü Å¥
+ * intï¿½ï¿½ Å¥
  */
 
 public class Ex4_3A_IntQueue {
-	private int max;		//Å¥ÀÇ ¿ë·®
-	private int front;		//Ã¹ ¹øÂ° ¿ä¼Ò Ä¿¼­
-	private int rear;		//¸¶Áö¸· ¿ä¼Ò Ä¿¼­
-	private int num;		//ÇöÀç µ¥ÀÌÅÍ ¼ö
-	private int[] que;		//Å¥ º»Ã¼
+	private int max;		//Å¥ï¿½ï¿½ ï¿½ë·®
+	private int front;		//Ã¹ ï¿½ï¿½Â° ï¿½ï¿½ï¿½ Ä¿ï¿½ï¿½
+	private int rear;		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Ä¿ï¿½ï¿½
+	private int num;		//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
+	private int[] que;		//Å¥ ï¿½ï¿½Ã¼
 	
-	//½ÇÇà ½Ã ¿¹¿Ü : Å¥°¡ ºñ¾î ÀÖÀ½
+	//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : Å¥ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	public class EmptyIntQueueException extends RuntimeException{
 		public EmptyIntQueueException() {}
 	}
 	
-	//½ÇÇà ½Ã ¿¹¿Ü : Å¥°¡ °¡µæ Âü
+	//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : Å¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
 	public class OverflowIntQueueException extends RuntimeException{
 		public OverflowIntQueueException() {}
 	}
 	
-	//»ý¼ºÀÚ
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public Ex4_3A_IntQueue(int capacity){
 		num = front = rear = 0;
 		max = capacity;
 		try {
-			que = new int[max];			//Å¥ º»Ã¼¿ë ¹è¿­À» »ý¼º
-		} catch (OutOfMemoryError e) { //»ý¼ºÇÒ ¼ö ¾øÀ½
+			que = new int[max];			//Å¥ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+		} catch (OutOfMemoryError e) { //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			// TODO: handle exception
 			max = 0;
 		}
 	}
 	
-	//Å¥¿¡ µ¥ÀÌÅÍ¸¦ ÀÎÅ¥
+	//Å¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½Å¥
 	public int enque(int x) throws OverflowIntQueueException {
 		if(num >= max) {
-			throw new OverflowIntQueueException();		//Å¥°¡ °¡µæÂü
+			throw new OverflowIntQueueException();		//Å¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		}
 		que[rear++] = x;
 		num++;
@@ -45,10 +45,10 @@ public class Ex4_3A_IntQueue {
 		return x;
 	}
 	
-	//Å¥¿¡¼­ µ¥ÀÌÅÍ¸¦ µðÅ¥
+	//Å¥ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½Å¥
 	public int deque() throws EmptyIntQueueException{
 		if(num <= 0) {
-			throw new EmptyIntQueueException();		//Å¥°¡ ºñ¾î ÀÖÀ½
+			throw new EmptyIntQueueException();		//Å¥ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		}
 		int x = que[front++];
 		num--;
@@ -59,54 +59,54 @@ public class Ex4_3A_IntQueue {
 		return x;
 	}
 	
-	//Å¥¿¡¼­ µ¥ÀÌÅÍ¸¦ ÇÇÅ©(ÇÁ·±Æ® µ¥ÀÌÅÍ¸¦ µé¿©´Ùº½)
+	//Å¥ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½Å©(ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½é¿©ï¿½Ùºï¿½)
 	public int peek() throws EmptyIntQueueException{
 		if(num <= 0) {
-			throw new EmptyIntQueueException();		//Å¥°¡ ºñ¾î ÀÖÀ½
+			throw new EmptyIntQueueException();		//Å¥ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		}
 		return que[front];
 	}
 	
-	//Å¥¿¡¼­ x¸¦ °Ë»öÇÏ¿© ÀÎµ¦½º(Ã£Áö ¸øÇÏ¸é -1)¸¦ ¹ÝÈ¯
+	//Å¥ï¿½ï¿½ï¿½ï¿½ xï¿½ï¿½ ï¿½Ë»ï¿½ï¿½Ï¿ï¿½ ï¿½Îµï¿½ï¿½ï¿½(Ã£ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¸ï¿½ -1)ï¿½ï¿½ ï¿½ï¿½È¯
 	public int indexOf(int x) {
 		for(int i = 0; i < num ; i++) {
 			int idx = (i + front) % max;
-			if(que[idx] == x) {						//°Ë»ö ¼º°ø
+			if(que[idx] == x) {						//ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½
 				return idx;
 			}
 		}
-		return -1;									//°Ë»ö ½ÇÆÐ
+		return -1;									//ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½
 	}
 	
-	//Å¥¸¦ ºñ¿ò
+	//Å¥ï¿½ï¿½ ï¿½ï¿½ï¿½
 	public void clear() {
 		num = front = rear = 0;
 	}
 	
-	//Å¥ÀÇ ¿ë·®À» ¹ÝÈ¯
+	//Å¥ï¿½ï¿½ ï¿½ë·®ï¿½ï¿½ ï¿½ï¿½È¯
 	public int capacity() {
 		return max;
 	}
 	
-	//Å¥¿¡ ½×¿© ÀÖ´Â µ¥ÀÌÅÍ ¼ö¸¦ ¹ÝÈ¯
+	//Å¥ï¿½ï¿½ ï¿½×¿ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
 	public int size() {
 		return num;
 	}
 	
-	//Å¥°¡ ºñ¾î ÀÖ³ª¿ä?
+	//Å¥ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ö³ï¿½ï¿½ï¿½?
 	public boolean isEmpty() {
 		return num <= 0;
 	}
 	
-	//Å¥°¡ °¡µæ Ã¡³ª¿ä?
+	//Å¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã¡ï¿½ï¿½ï¿½ï¿½?
 	public boolean isFull() {
 		return num >= max;
 	}
 	
-	//Å¥ ¾ÈÀÇ ¸ðµç µ¥ÀÌÅÍ¸¦ ÇÁ·±Æ® -> ¸®¾î ¼øÀ¸·Î Ãâ·Â
+	//Å¥ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½Æ® -> ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 	public void dump() {
 		if(num <=0) {
-			System.out.println("Å¥°¡ ºñ¾î ÀÖ½À´Ï´Ù.");
+			System.out.println("Å¥ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.");
 		}else {
 			for(int i = 0; i < num ; i++) {
 				System.out.println(que[(i+front) % max] + " ");

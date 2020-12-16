@@ -1,21 +1,21 @@
 /*
- * ¼±Çü °Ë»ö
+ * ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½
  */
-package com.berlin83.chap03;
+package chap03;
 
 import java.util.Scanner;
 
 class SeqSearch{
-	//¿ä¼Ú¼ö°¡nÀÎ ¹è¿­ a¿¡¼­ key¿Í °°Àº ¿ä¼Ò¸¦ ¼±Çü °Ë»öÇÕ´Ï´Ù.
+	//ï¿½ï¿½Ú¼ï¿½ï¿½ï¿½nï¿½ï¿½ ï¿½è¿­ aï¿½ï¿½ï¿½ï¿½ keyï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ï¿½Õ´Ï´ï¿½.
 	static int seqSearch(int[] a,int n, int key) {
 		int i = 0;
 		
 		while(true) {
 			if(i == n) {
-				return -1;							//°Ë»ö ½ÇÆÐ(-1À» ¹ÝÈ¯)
+				return -1;							//ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½(-1ï¿½ï¿½ ï¿½ï¿½È¯)
 			}
 			if(a[i] == key) {
-				return i;							//°Ë»ö ¼º°ø(ÀÎµ¦½º¸¦ ¹ÝÈ¯)
+				return i;							//ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½(ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯)
 			}
 			i++;
 		}
@@ -28,24 +28,24 @@ public class Ex3_1_SeqSearch {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 		
-		System.out.print("¿ä¼Ú¼ö : ");
+		System.out.print("ï¿½ï¿½Ú¼ï¿½ : ");
 		int num = stdIn.nextInt();
-		int[] x = new int[num];						//¿ä¼Ú¼ö°¡ numÀÎ ¹è¿­
+		int[] x = new int[num];						//ï¿½ï¿½Ú¼ï¿½ï¿½ï¿½ numï¿½ï¿½ ï¿½è¿­
 		
 		for(int i = 0; i < num ; i++) {
 			System.out.print("x[" + i + "] :");
 			x[i] = stdIn.nextInt();
 		}
 		
-		System.out.print("°Ë»öÇÒ °ª : ");				//Å° °ªÀ» ÀÔ·Â
+		System.out.print("ï¿½Ë»ï¿½ï¿½ï¿½ ï¿½ï¿½ : ");				//Å° ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½
 		int ky = stdIn.nextInt();
 		
-		int idx = SeqSearch.seqSearch(x, num, ky);	//¹è¿­ x¿¡¼­ Å° °ªÀÌ kyÀÎ ¿ä¼Ò¸¦ °Ë»ö
+		int idx = SeqSearch.seqSearch(x, num, ky);	//ï¿½è¿­ xï¿½ï¿½ï¿½ï¿½ Å° ï¿½ï¿½ï¿½ï¿½ kyï¿½ï¿½ ï¿½ï¿½Ò¸ï¿½ ï¿½Ë»ï¿½
 		
 		if(idx == -1) {
-			System.out.println("±× °ªÀÇ ¿ä¼Ò°¡ ¾ø½À´Ï´Ù.");
+			System.out.println("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 		}else {
-			System.out.println(ky + "Àº(´Â) x["+ idx + "]¿¡ ÀÖ½À´Ï´Ù.");
+			System.out.println(ky + "ï¿½ï¿½(ï¿½ï¿½) x["+ idx + "]ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.");
 		}
 	}
 }

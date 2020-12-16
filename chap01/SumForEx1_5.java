@@ -1,4 +1,4 @@
-package com.berlin83.chap01;
+package chap01;
 
 import java.util.Scanner;
 
@@ -9,8 +9,8 @@ public class SumForEx1_5 {
 		@SuppressWarnings("resource")
 		Scanner stdIn = new Scanner(System.in);
 		
-		System.out.println("1╨нем n╠НаЖюг гую╩ ╠╦гу╢о╢ы.");
-		System.out.print("nюг ╟╙ : ");
+		System.out.println("1О©╫О©╫О©╫О©╫ nО©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫у╢о╢О©╫.");
+		System.out.print("nО©╫О©╫ О©╫О©╫ : ");
 		int n = stdIn.nextInt();
 		
 		int sum = 0;
@@ -19,7 +19,7 @@ public class SumForEx1_5 {
 			sum += i;
 		}
 		
-		System.out.println("1╨нем "+n+"╠НаЖюг гую╨ " +sum+"ют╢о╢ы.");
+		System.out.println("1О©╫О©╫О©╫О©╫ "+n+"О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ " +sum+"О©╫т╢о╢О©╫.");
 	}
 
 }

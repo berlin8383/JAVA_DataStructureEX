@@ -1,34 +1,34 @@
-package com.berlin83.chap04;
+package chap04;
 /*
- * intÇü ½ºÅÃ
+ * intï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
  */
 
-import com.berlin83.chap04.Ex4_1C_IntStack.EmptyIntStackException;
+import chap04.Ex4_1C_IntStack.EmptyIntStackException;
 
 public class Ex4_1E_IntStack {
-	private int max;			//½ºÅÃ ¿ë·®
-	private int ptr;			//½ºÅÃ Æ÷ÀÎÅÍ
-	private int[] stk;			//½ºÅÃ º»Ã¼
+	private int max;			//ï¿½ï¿½ï¿½ï¿½ ï¿½ë·®
+	private int ptr;			//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	private int[] stk;			//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼
 	
-	//½ÇÇà ½Ã ¿¹¿Ü : ½ºÅÃÀÌ ºñ¾îÀÖÀ½
+	//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public class EmptyIntStackException extends RuntimeException {
 		public EmptyIntStackException() {}		
 	}
 	
-	//½ÇÇà ½Ã ¿¹¿Ü : ½ºÅÃÀÌ °¡µæÂü
+	//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public class OverflowItStackException extends RuntimeException{
 		public OverflowItStackException() {}
 	}
 	
-	//»ý¼ºÀÚ
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public Ex4_1E_IntStack(int capacity) {
 		// TODO Auto-generated constructor stub
 		ptr = 0;
 		max = capacity;
 		try {
-			stk = new int[max];				//½ºÅÃ º»Ã¼¿ë ¹è¿­À» »ý¼º
+			stk = new int[max];				//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			
-		}catch(OutOfMemoryError e) {		//»ý¼ºÇÒ ¼ö ¾øÀ½
+		}catch(OutOfMemoryError e) {		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			max = 0;
 		}
 		
@@ -36,69 +36,69 @@ public class Ex4_1E_IntStack {
 	
 	public int push(int x) throws OverflowItStackException{
 		if(ptr >= max) {
-			throw new OverflowItStackException();	//½ºÅØÀÌ °¡µæÂü
+			throw new OverflowItStackException();	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			
 		}
 		return stk[ptr++] = x;
 	}
 	
-	//½ºÅÃ¿¡¼­ µ¥ÀÌÅÍ¸¦ ÆË(Á¤»ó¿¡ ÀÖ´Â µ¥ÀÌÅÍ¸¦ ²¨³¿)
+	//ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½)
 	public int pop() throws EmptyIntStackException{
-		if(ptr <= 0) {						//½ºÅÃÀÌ ºñ¾î ÀÖÀ½
+		if(ptr <= 0) {						//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			throw new EmptyIntStackException();
 		}
 		return stk[--ptr];
 			
 	}
 	
-	//½ºÅÃ¿¡¼­ µ¥ÀÌÅÍ¸¦ ÇÇÅ©(Á¤»ó¿¡ ÀÖ´Â µ¥ÀÌÅÍ¸¦ µé¿©´Ùº½)
+	//ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½Å©(ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½é¿©ï¿½Ùºï¿½)
 		public int peek() throws EmptyIntStackException{
-			if(ptr <= 0) {						//½ºÅÃÀÌ ºñ¾î ÀÖÀ½
+			if(ptr <= 0) {						//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 				throw new EmptyIntStackException();
 			}
 			return stk[ptr -1];
 		}
-	// ½ºÅÃ¿¡¼­ x¸¦ Ã£¾Æ ÀÎµ¦½º (¾øÀ¸¸é -1)¸¦ ¹ÝÈ¯
+	// ï¿½ï¿½ï¿½Ã¿ï¿½ï¿½ï¿½ xï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ -1)ï¿½ï¿½ ï¿½ï¿½È¯
 	public int indexOf(int x) {
-		for(int i = ptr -1; i >= 0; i--) {//Á¤»ó ÂÊ¿¡¼­ ¼±Çü °Ë»ö
+		for(int i = ptr -1; i >= 0; i--) {//ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½
 			if (stk[i] ==x) {
-				return i;	//°Ë»ö ¼º°ø
+				return i;	//ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½
 			}
 			
 			
 		}
-		return -1;			//°Ë»ö ½ÇÆÐ
+		return -1;			//ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½
 	}
 	
-	//½ºÅÃÀ» ºñ¿ò
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 	public void clear() {
 		ptr = 0;
 	}
 	
-	//½ºÅÃÀÇ ¿ë·®À» ¹ÝÈ¯
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ë·®ï¿½ï¿½ ï¿½ï¿½È¯
 	public int capacity() {
 		return max;
 	}
 	
-	//½ºÅÃ¿¡ ½×¿©ÀÖ´Â µ¥ÀÌÅÍ ¼ö¸¦ ¹ÝÈ¯
+	//ï¿½ï¿½ï¿½Ã¿ï¿½ ï¿½×¿ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
 	public int size() {
 		return ptr;
 	}
 	
-	//½ºÅÃÀÌ ºñ¾î ÀÖ´Â°¡?
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ö´Â°ï¿½?
 	public boolean isEmpty() {
 		return ptr <= 0;
 	}
 	
-	//½ºÅÃÀÌ °¡µæ Ã¡´Â°¡?
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã¡ï¿½Â°ï¿½?
 	public boolean isFull() {
 		return ptr >= max;
 	}
 	
-	//½ºÅÃ ¾ÈÀÇ ¸ðµç µ¥ÀÌÅÍ¸¦ ¹Ù´Ú -> ²À´ë±â ¼ø¼­·Î Ãâ·Â
+	//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½Ù´ï¿½ -> ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
 	public void dump() {
 		if (ptr <=0) {
-			System.out.println("½ºÅÃÀÌ ºñ¾îÀÖ½À´Ï´Ù.");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ö½ï¿½ï¿½Ï´ï¿½.");
 		}else {
 			for(int i =0; i < ptr ; i++) {
 				System.out.print(stk[i] + " ");

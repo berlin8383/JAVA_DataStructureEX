@@ -1,39 +1,39 @@
-package com.berlin83.chap04;
+package chap04;
 /*
- * intÇü ½ºÅÃ
+ * intï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
  */
 
 public class Ex4_1B_IntStack {
-	private int max;			//½ºÅÃ ¿ë·®
-	private int ptr;			//½ºÅÃ Æ÷ÀÎÅÍ
-	private int[] stk;			//½ºÅÃ º»Ã¼
+	private int max;			//ï¿½ï¿½ï¿½ï¿½ ï¿½ë·®
+	private int ptr;			//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	private int[] stk;			//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼
 	
-	//½ÇÇà ½Ã ¿¹¿Ü : ½ºÅÃÀÌ ºñ¾îÀÖÀ½
+	//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public class EmptyIntStackException extends RuntimeException {
 		public EmptyIntStackException() {}		
 	}
 	
-	//½ÇÇà ½Ã ¿¹¿Ü : ½ºÅÃÀÌ °¡µæÂü
+	//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public class OverflowItStackException extends RuntimeException{
 		public OverflowItStackException() {}
 	}
 	
-	//»ý¼ºÀÚ
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public Ex4_1B_IntStack(int capacity) {
 		// TODO Auto-generated constructor stub
 		ptr = 0;
 		max = capacity;
 		try {
-			stk = new int[max];				//½ºÅÃ º»Ã¼¿ë ¹è¿­À» »ý¼º
+			stk = new int[max];				//ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			
-		}catch(OutOfMemoryError e) {		//»ý¼ºÇÒ ¼ö ¾øÀ½
+		}catch(OutOfMemoryError e) {		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			max = 0;
 		}
 		
 	}
 	public int push(int x) throws OverflowItStackException{
 		if(ptr >= max) {
-			throw new OverflowItStackException();	//½ºÅØÀÌ °¡µæÂü
+			throw new OverflowItStackException();	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			
 		}
 		return stk[ptr++] = x;

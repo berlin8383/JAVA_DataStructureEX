@@ -1,4 +1,4 @@
-package com.berlin83.chap04;
+package chap04;
 /*
  * int�� ����
  * 하하하 처음에 썼던 파일의 한글은 죄다 깨져버렸네;;;

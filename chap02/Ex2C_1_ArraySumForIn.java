@@ -1,6 +1,6 @@
-package com.berlin83.chap02;
+package chap02;
 /*
- * ¹è¿­ÀÇ ¸ðµç ¿ä¼ÒÀÇ ÇÕÀ» ±¸ÇÏ¿© Ãâ·ÂÇÔ(È®Àå for¹®)
+ * ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½(È®ï¿½ï¿½ forï¿½ï¿½)
  */
 
 public class Ex2C_1_ArraySumForIn {
@@ -12,12 +12,12 @@ public class Ex2C_1_ArraySumForIn {
 			System.out.println("a [ "+i+" ] = " + a[i]);
 		}
 		
-		double sum = 0;									//ÇÕ°è
+		double sum = 0;									//ï¿½Õ°ï¿½
 		
 		for(double i : a) {
 			sum += i;
 		}
-		System.out.println("¸ðµç ¿ä¼ÒÀÇ ÇÕÀº "+ sum + " ÀÔ´Ï´Ù.");
+		System.out.println("ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ "+ sum + " ï¿½Ô´Ï´ï¿½.");
 	}
 
 }

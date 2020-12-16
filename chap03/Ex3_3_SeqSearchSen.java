@@ -1,9 +1,9 @@
-package com.berlin83.chap03;
+package chap03;
 
 import java.util.Scanner;
 
 /*
- * ¼±Çü °Ë»ö º¸ÃÊ¹ý
+ * ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½Ê¹ï¿½
  */
 
 public class Ex3_3_SeqSearchSen {
@@ -11,10 +11,10 @@ public class Ex3_3_SeqSearchSen {
 	static int seqSearchSen(int[]a ,int n, int key) {
 		int i = 0;
 		
-		a[n] = key;								//º¸ÃÊ¸¦ Ãß°¡
+		a[n] = key;								//ï¿½ï¿½ï¿½Ê¸ï¿½ ï¿½ß°ï¿½
 		
 		while(true) {
-			if(a[i] == key) {					//°Ë»ö ¼º°ø
+			if(a[i] == key) {					//ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½
 				break;
 			}
 			i++;
@@ -26,24 +26,24 @@ public class Ex3_3_SeqSearchSen {
 	public static void main(String[] args) {
 		Scanner stdId = new Scanner(System.in);
 		
-		System.out.print("¿ä¼Ú¼ö : ");
+		System.out.print("ï¿½ï¿½Ú¼ï¿½ : ");
 		int num = stdId.nextInt();
-		int[]x = new int[num+1];					//¿ä¼Ú¼ö num+1
+		int[]x = new int[num+1];					//ï¿½ï¿½Ú¼ï¿½ num+1
 		
 		for(int i=0;i < num ; i ++) {
 			System.out.print("x[" + i + "] : ");
 			x[i] = stdId.nextInt();
 		}
 		
-		System.out.print("°Ë»öÇÒ °ª : ");				//Å° °ªÀ» ÀÔ·Â
+		System.out.print("ï¿½Ë»ï¿½ï¿½ï¿½ ï¿½ï¿½ : ");				//Å° ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½
 		int ky = stdId.nextInt();
 		
-		int idx = seqSearchSen(x, num, ky);			//¹è¿­ x¿¡¼­ °ªkyÀÎ ¿ä¼Ò¸¦ °Ë»ö
+		int idx = seqSearchSen(x, num, ky);			//ï¿½è¿­ xï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½kyï¿½ï¿½ ï¿½ï¿½Ò¸ï¿½ ï¿½Ë»ï¿½
 		
 		if(idx == -1) {
-			System.out.println("±× °ªÀÇ ¿ä¼Ò°¡ ¾ø½À´Ï´Ù.");
+			System.out.println("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 		}else {
-			System.out.println(ky + "Àº(´Â) x [" + idx + "]¿¡ ÀÖ½À´Ï´Ù.");
+			System.out.println(ky + "ï¿½ï¿½(ï¿½ï¿½) x [" + idx + "]ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.");
 		}
 	}
 }

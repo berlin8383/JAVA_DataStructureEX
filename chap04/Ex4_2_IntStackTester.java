@@ -1,5 +1,5 @@
-package com.berlin83.chap04;
-//intÇü ½ºÅÃÀÇ »ç¿ë ¿¹
+package chap04;
+//intï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½
 
 import java.util.Scanner;
 
@@ -10,47 +10,47 @@ public class Ex4_2_IntStackTester {
 		Ex4_1E_IntStack s = new Ex4_1E_IntStack(64);
 		
 		while(true) {
-			System.out.println("ÇöÀç µ¥ÀÌÅÍ ¼ö : " + s.size() + "/"
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ : " + s.size() + "/"
 											  + s.capacity());
-			System.out.print("(1)Çª½Ã	(2)ÆË	(3)ÇÇÅ©"+
-							 "(4)´ýÇÁ	(0)Á¾·á : ");
+			System.out.print("(1)Çªï¿½ï¿½	(2)ï¿½ï¿½	(3)ï¿½ï¿½Å©"+
+							 "(4)ï¿½ï¿½ï¿½ï¿½	(0)ï¿½ï¿½ï¿½ï¿½ : ");
 			
 			int menu = stdIn.nextInt();
 			if(menu == 0) break;
 			
 			int x;
 			switch (menu) {
-			case 1:	//Çª½Ã
-				System.out.print("µ¥ÀÌÅÍ : ");
+			case 1:	//Çªï¿½ï¿½
+				System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ");
 				x = stdIn.nextInt();
 				try {
 					s.push(x);
 				}catch (Ex4_1E_IntStack.OverflowItStackException e) {
 					// TODO: handle exception
-					System.out.println("½ºÅÃÀÌ °¡µæ Ã¡½À´Ï´Ù.");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã¡ï¿½ï¿½ï¿½Ï´ï¿½.");
 				}
 				break;
 				
-			case 2:	//ÆË
+			case 2:	//ï¿½ï¿½
 				try {
 					x=s.pop();
-					System.out.println("ÆËÇÑ µ¥ÀÌÅÍ´Â " + x + "ÀÔ´Ï´Ù.");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í´ï¿½ " + x + "ï¿½Ô´Ï´ï¿½.");
 				} catch (Ex4_1E_IntStack.OverflowItStackException e) {
 					// TODO: handle exception
-					System.out.println("½ºÅÃÀÌ ºñ¾î ÀÖ½À´Ï´Ù.");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.");
 				}
 				break;
-			case 3:	//ÇÇÅ©
+			case 3:	//ï¿½ï¿½Å©
 				try {
 					x = s.peek();
-					System.out.println("ÇÇÅ©ÇÑ µ¥ÀÌÅÍ´Â "+x+"ÀÔ´Ï´Ù.");
+					System.out.println("ï¿½ï¿½Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í´ï¿½ "+x+"ï¿½Ô´Ï´ï¿½.");
 				} catch (Ex4_1E_IntStack.OverflowItStackException e) {
 					// TODO: handle exception
-					System.out.println("½ºÅÃÀÌ ºñ¾î ÀÖ½À´Ï´Ù.");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.");
 				}
 				break;
 				
-			case 4:	//´ýÇÁ
+			case 4:	//ï¿½ï¿½ï¿½ï¿½
 				s.dump();
 				break;
 				

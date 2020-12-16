@@ -1,57 +1,57 @@
-package com.berlin83.chap04;
+package chap04;
 
 import java.util.Scanner;
 
-//intÇü Å¥ÀÇ »ç¿ë ¿¹
+//intï¿½ï¿½ Å¥ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½
 
 public class Ex4_4_IntQueueTester {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
-		Ex4_3A_IntQueue s = new Ex4_3A_IntQueue(64);	//ÃÖ´ë 64°³¸¦ ÀÎÅ¥ÇÒ ¼ö ÀÖ´Â Å¥
+		Ex4_3A_IntQueue s = new Ex4_3A_IntQueue(64);	//ï¿½Ö´ï¿½ 64ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¥ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½ Å¥
 		
 		while(true) {
-			System.out.println("ÇöÀç µ¥ÀÌÅÍ¼ö  : "+s.size()+"/"+s.capacity());
-			System.out.print("(1)ÀÎÅ¥	(2)µðÅ¥ 	(3)ÇÇÅ© 	(4)´ýÇÁ	(0)Á¾·á");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½  : "+s.size()+"/"+s.capacity());
+			System.out.print("(1)ï¿½ï¿½Å¥	(2)ï¿½ï¿½Å¥ 	(3)ï¿½ï¿½Å© 	(4)ï¿½ï¿½ï¿½ï¿½	(0)ï¿½ï¿½ï¿½ï¿½");
 			
 			int menu = stdIn.nextInt();
 			if(menu == 0)break;
 			
 			int x;
 			switch (menu) {
-			case 1: //ÀÎÅ¥
-				System.out.print("µ¥ÀÌÅÍ : ");
+			case 1: //ï¿½ï¿½Å¥
+				System.out.print("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ");
 				x = stdIn.nextInt();
 				try {
 					s.enque(x);
 				} catch (Ex4_3A_IntQueue.OverflowIntQueueException e) {
 					// TODO: handle exception
-					System.out.println("Å¥°¡ °¡µæ Ã¡½À´Ï´Ù.");
+					System.out.println("Å¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã¡ï¿½ï¿½ï¿½Ï´ï¿½.");
 				}
 				
 				break;
 				
-			case 2: //µðÅ¥
+			case 2: //ï¿½ï¿½Å¥
 				try {
 					x = s.deque();
-					System.out.println("µðÅ¥ÇÑ µ¥ÀÌÅÍ´Â " + x + "ÀÔ´Ï´Ù.");
+					System.out.println("ï¿½ï¿½Å¥ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í´ï¿½ " + x + "ï¿½Ô´Ï´ï¿½.");
 				} catch (Ex4_3A_IntQueue.OverflowIntQueueException e) {
 					// TODO: handle exception
-					System.out.println("Å¥°¡ ºñ¾î ÀÖ½À´Ï´Ù.");
+					System.out.println("Å¥ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.");
 				}
 				break;
 				
-			case 3: //ÇÇÅ©
+			case 3: //ï¿½ï¿½Å©
 				try {
 					
 					x = s.peek();
-					System.out.println("ÇÇÅ©ÇÑ µ¥ÀÌÅÍ´Â "+x+"ÀÔ´Ï´Ù.");
+					System.out.println("ï¿½ï¿½Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í´ï¿½ "+x+"ï¿½Ô´Ï´ï¿½.");
 				} catch (Ex4_3A_IntQueue.OverflowIntQueueException e) {
 					// TODO: handle exception
-					System.out.println("Å¥°¡ ºñ¾î ÀÖ½À´Ï´Ù.");
+					System.out.println("Å¥ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.");
 				}
 				break;
 				
-			case 4: //´ýÇÁ
+			case 4: //ï¿½ï¿½ï¿½ï¿½
 				s.dump();
 				break;
 			}

@@ -1,23 +1,23 @@
 /*
- * µÎ °ªÀÇ ±³È¯
- * ¹è¿­ÀÇ ¿ª¼ø Á¤·ÄÀº ¿ä¼Ò ±³È¯ÀÌ ÃÑ n/2È¸ ÇÊ¿äÇÕ´Ï´Ù.
+ * ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
+ * ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½ï¿½ ï¿½ï¿½ n/2È¸ ï¿½Ê¿ï¿½ï¿½Õ´Ï´ï¿½.
  * 
  */
-package com.berlin83.chap02;
+package chap02;
 
 import java.util.Scanner;
 
-//¹è¿­ ¿ä¼Ò¿¡ °ªÀ» ÀÐ¾î µé¿© ¿ª¼øÀ¸·Î Á¤·ÄÇÕ´Ï´Ù.
+//ï¿½è¿­ ï¿½ï¿½Ò¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¾ï¿½ ï¿½é¿© ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
 
 public class Ex2_6_ReverseArray {
-	//¹è¿­ ¿ä¼Ò a[idx1]°ú a[idx2]ÀÇ °ªÀ» ¹Ù²Þ
+	//ï¿½è¿­ ï¿½ï¿½ï¿½ a[idx1]ï¿½ï¿½ a[idx2]ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²ï¿½
 	static void swap(int[] a,int idx1, int idx2 ) {
 		int t = a[idx1];
 		a[idx1] = a[idx2];
 		a[idx2] = t;
 	}
 	
-	//¹è¿­ aÀÇ ¿ä¼Ò¸¦ ¿ª¼øÀ¸·Î Á¤·Ä
+	//ï¿½è¿­ aï¿½ï¿½ ï¿½ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	static void reverse(int[] a) {
 		for (int i = 0; i < a.length /2 ; i++) {
 			swap(a, i, a.length-i-1);
@@ -28,8 +28,8 @@ public class Ex2_6_ReverseArray {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 		
-		System.out.print("¿ä¼Ú¼ö : ");
-		int num = stdIn.nextInt();			//¿ä¼Ú¼ö
+		System.out.print("ï¿½ï¿½Ú¼ï¿½ : ");
+		int num = stdIn.nextInt();			//ï¿½ï¿½Ú¼ï¿½
 		
 		int[] x = new int[num];
 		int[] y = new int[num];
@@ -44,7 +44,7 @@ public class Ex2_6_ReverseArray {
 		
 		reverse(x);
 		
-		System.out.println("¿ä¼Ò¸¦ ¿ª¼øÀ¸·Î Á¤·ÄÇß½À´Ï´Ù.");
+		System.out.println("ï¿½ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ß½ï¿½ï¿½Ï´ï¿½.");
 		for(int i =0 ; i <num; i++) {
 			System.out.print("y["+i+"] = "+y[i]+"   ");
 			System.out.println("x["+i+"] = "+x[i]);

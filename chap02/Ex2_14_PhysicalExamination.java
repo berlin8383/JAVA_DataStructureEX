@@ -1,27 +1,27 @@
 /*
- * Å¬·¡½ºÀÇ ¹è¿­
- * ½Ç½À 2-14´Â ½ÅÃ¼°Ë»ç µ¥ÀÌÅÍ¸¦ µû·Îµû·ÎÀÎ ¹è¿­ÀÇ ¸ðÀÓÀÌ ¾Æ´Ñ Å¬·¡½ºÀÇ ¹è¿­·Î ±¸ÇöÇÑ 
- * ÇÁ·Î±×·¥ÀÔ´Ï´Ù. Å¬·¡½º PhyscData´Â ÀÌ¸§(StringÇü), Å°(intÇü), ½Ã·Â(doubleÇü)À» ÇÑ±ºµ¥·Î
- * ¸ðÀº °ÍÀÔ´Ï´Ù. ÀÌ ÇÁ·Î±×·¥Àº ½ÅÃ¼°Ë»ç µ¥ÀÌÅÍÀÇ ¾Ë¶÷Ç¥¸¦ ³ªÅ¸³»°í Æò±Õ Å°¿Í ½Ã·ÂÀÇ ºÐÆ÷¸¦ 
- * º¸¿©ÁÝ´Ï´Ù.
+ * Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­
+ * ï¿½Ç½ï¿½ 2-14ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Æ´ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+ * ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½Ô´Ï´ï¿½. Å¬ï¿½ï¿½ï¿½ï¿½ PhyscDataï¿½ï¿½ ï¿½Ì¸ï¿½(Stringï¿½ï¿½), Å°(intï¿½ï¿½), ï¿½Ã·ï¿½(doubleï¿½ï¿½)ï¿½ï¿½ ï¿½Ñ±ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ô´Ï´ï¿½. ï¿½ï¿½ ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë¶ï¿½Ç¥ï¿½ï¿½ ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Å°ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+ * ï¿½ï¿½ï¿½ï¿½ï¿½Ý´Ï´ï¿½.
  */
-package com.berlin83.chap02;
+package chap02;
 
 import java.util.Scanner;
 
-//½ÅÃ¼ °Ë»ç µ¥ÀÌÅÍ¿ë Å¬·¡½º ¹è¿­¿¡¼­ Æò±Õ Å°¿Í ½Ã·ÂÀÇ ºÐÆ÷¸¦ ±¸ÇÔ
+//ï¿½ï¿½Ã¼ ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ Å°ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 
 public class Ex2_14_PhysicalExamination {
 	
-	static final int VMAX = 21; //½Ã·Â ºÐÆ÷(0.0¿¡¼­ 0.1 ´ÜÀ§·Î 21°³)
+	static final int VMAX = 21; //ï¿½Ã·ï¿½ ï¿½ï¿½ï¿½ï¿½(0.0ï¿½ï¿½ï¿½ï¿½ 0.1 ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 21ï¿½ï¿½)
 	
 	static class PhyscData{
-		String name;				//ÀÌ¸§
+		String name;				//ï¿½Ì¸ï¿½
 		int    height;				//Å°
-		double vision;				//½Ã·Â
+		double vision;				//ï¿½Ã·ï¿½
 		
 		
-		//»ý¼ºÀÚ
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		public PhyscData(String name, int height, double vision) {
 			// TODO Auto-generated constructor stub
 			this.name = name;
@@ -31,7 +31,7 @@ public class Ex2_14_PhysicalExamination {
 		}	
 	}
 	
-	//Å°ÀÇ Æò±Õ°ªÀ» ±¸ÇÔ
+	//Å°ï¿½ï¿½ ï¿½ï¿½Õ°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	static double aveHeight(PhyscData[] dat) {
 		
 		double sum = 0;
@@ -43,7 +43,7 @@ public class Ex2_14_PhysicalExamination {
 		return sum / dat.length;
 	}
 	
-	//½Ã·Â ºÐÆ÷¸¦ ±¸ÇÔ
+	//ï¿½Ã·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	static void disVision(PhyscData[] dat, int[] dist) {
 		
 		int i = 0;
@@ -60,30 +60,30 @@ public class Ex2_14_PhysicalExamination {
 		Scanner stdIn = new Scanner(System.in);
 		
 		PhyscData[] x = {
-				new PhyscData("¹ÚÇö±Ô", 162, 0.3),
-				new PhyscData("Ç×Áø¾Æ", 173, 0.7),
-				new PhyscData("ÃÖÀ±¹Ì", 175, 2.0),
-				new PhyscData("È«¿¬ÀÇ", 171, 1.5),
-				new PhyscData("ÀÌ¼öÁø", 168, 0.4),
-				new PhyscData("±è¿µÁØ", 174, 1.2),
-				new PhyscData("¹Ú¿ë±Ô", 169, 0.8),
+				new PhyscData("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", 162, 0.3),
+				new PhyscData("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", 173, 0.7),
+				new PhyscData("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", 175, 2.0),
+				new PhyscData("È«ï¿½ï¿½ï¿½ï¿½", 171, 1.5),
+				new PhyscData("ï¿½Ì¼ï¿½ï¿½ï¿½", 168, 0.4),
+				new PhyscData("ï¿½è¿µï¿½ï¿½", 174, 1.2),
+				new PhyscData("ï¿½Ú¿ï¿½ï¿½", 169, 0.8),
 				
 		};
-		int[] vdist = new int[VMAX];				//½Ã·ÂºÐÆ÷
+		int[] vdist = new int[VMAX];				//ï¿½Ã·Âºï¿½ï¿½ï¿½
 		
-		System.out.println(" ½ÅÃ¼ °Ë»ç ¸®½ºÆ®  ");
-		System.out.println("ÀÌ¸§       Å°    ½Ã·Â ");
+		System.out.println(" ï¿½ï¿½Ã¼ ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½Æ®  ");
+		System.out.println("ï¿½Ì¸ï¿½       Å°    ï¿½Ã·ï¿½ ");
 		System.out.println("--------------");
 		for(int i = 0; i < x.length; i++) {
 			System.out.printf("%-8s%3d%5.1f\n", x[i].name,x[i].height,x[i].vision);
 		}
-		System.out.printf("\n Æò±Õ Å° : %5.1fcm\n", aveHeight(x));
+		System.out.printf("\n ï¿½ï¿½ï¿½ Å° : %5.1fcm\n", aveHeight(x));
 		
-		disVision(x, vdist);						//½Ã·Â ºÐÆ÷¸¦ ±¸ÇÔ
+		disVision(x, vdist);						//ï¿½Ã·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		
-		System.out.println("\n½Ã·Â ºÐÆ÷");
+		System.out.println("\nï¿½Ã·ï¿½ ï¿½ï¿½ï¿½ï¿½");
 		for(int i = 0; i < VMAX ; i++) {
-			System.out.printf("%3.1f~ : %2d¸í\n", i / 10.0, vdist[i]);
+			System.out.printf("%3.1f~ : %2dï¿½ï¿½\n", i / 10.0, vdist[i]);
 		}
 	}
 }

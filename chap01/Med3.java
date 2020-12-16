@@ -1,4 +1,4 @@
-package com.berlin83.chap01;
+package chap01;
 
 public class Med3 {
 

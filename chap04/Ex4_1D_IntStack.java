@@ -1,34 +1,34 @@
-package com.berlin83.chap04;
+package chap04;
 /*
- * intгЭ ╫╨ец
+ * intО©╫О©╫ О©╫О©╫О©╫О©╫
  */
 
-import com.berlin83.chap04.Ex4_1C_IntStack.EmptyIntStackException;
+import chap04.Ex4_1C_IntStack.EmptyIntStackException;
 
 public class Ex4_1D_IntStack {
-	private int max;			//╫╨ец ©К╥╝
-	private int ptr;			//╫╨ец фВюнем
-	private int[] stk;			//╫╨ец ╨╩ц╪
+	private int max;			//О©╫О©╫О©╫О©╫ О©╫К╥╝
+	private int ptr;			//О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫
+	private int[] stk;			//О©╫О©╫О©╫О©╫ О©╫О©╫ц╪
 	
-	//╫ггЮ ╫ц ©╧©э : ╫╨ецюл ╨Я╬Нюжю╫
+	//О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫ : О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫
 	public class EmptyIntStackException extends RuntimeException {
 		public EmptyIntStackException() {}		
 	}
 	
-	//╫ггЮ ╫ц ©╧©э : ╫╨ецюл ╟║╣ФбЭ
+	//О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫ : О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫
 	public class OverflowItStackException extends RuntimeException{
 		public OverflowItStackException() {}
 	}
 	
-	//╩Щ╪╨юз
+	//О©╫О©╫О©╫О©╫О©╫О©╫
 	public Ex4_1D_IntStack(int capacity) {
 		// TODO Auto-generated constructor stub
 		ptr = 0;
 		max = capacity;
 		try {
-			stk = new int[max];				//╫╨ец ╨╩ц╪©К ╧Х©╜ю╩ ╩Щ╪╨
+			stk = new int[max];				//О©╫О©╫О©╫О©╫ О©╫О©╫ц╪О©╫О©╫ О©╫Х©╜О©╫О©╫ О©╫О©╫О©╫О©╫
 			
-		}catch(OutOfMemoryError e) {		//╩Щ╪╨гр ╪Ж ╬Ью╫
+		}catch(OutOfMemoryError e) {		//О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫
 			max = 0;
 		}
 		
@@ -36,24 +36,24 @@ public class Ex4_1D_IntStack {
 	
 	public int push(int x) throws OverflowItStackException{
 		if(ptr >= max) {
-			throw new OverflowItStackException();	//╫╨еьюл ╟║╣ФбЭ
+			throw new OverflowItStackException();	//О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫
 			
 		}
 		return stk[ptr++] = x;
 	}
 	
-	//╫╨ец©║╪╜ ╣╔юлем╦╕ фк(а╓╩С©║ юж╢б ╣╔юлем╦╕ ╡╗Ё©)
+	//О©╫О©╫О©╫ц©О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫м╦О©╫ О©╫О©╫(О©╫О©╫О©╫О©╫ О©╫ж╢О©╫ О©╫О©╫О©╫О©╫О©╫м╦О©╫ О©╫О©╫О©╫О©╫)
 	public int pop() throws EmptyIntStackException{
-		if(ptr <= 0) {						//╫╨ецюл ╨Я╬Н южю╫
+		if(ptr <= 0) {						//О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫
 			throw new EmptyIntStackException();
 		}
 		return stk[--ptr];
 			
 	}
 	
-	//╫╨ец©║╪╜ ╣╔юлем╦╕ гге╘(а╓╩С©║ юж╢б ╣╔юлем╦╕ ╣И©╘╢ы╨╫)
+	//О©╫О©╫О©╫ц©О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫м╦О©╫ О©╫О©╫е╘(О©╫О©╫О©╫О©╫ О©╫ж╢О©╫ О©╫О©╫О©╫О©╫О©╫м╦О©╫ О©╫И©╘О©╫ы╨О©╫)
 		public int peek() throws EmptyIntStackException{
-			if(ptr <= 0) {						//╫╨ецюл ╨Я╬Н южю╫
+			if(ptr <= 0) {						//О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫
 				throw new EmptyIntStackException();
 			}
 			return stk[ptr -1];

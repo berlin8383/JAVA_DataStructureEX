@@ -1,4 +1,4 @@
-package com.berlin83.chap04;
+package chap04;
 
 import java.util.Scanner;
 

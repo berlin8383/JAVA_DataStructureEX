@@ -1,40 +1,40 @@
-package com.berlin83.chap03;
+package chap03;
 
 import java.util.Scanner;
 
-//ÀÌÁø °Ë»ö
+//ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½
 
 
 public class Ex3_4_BinSearch {
-	//¿ä¼Ú¼ö°¡ nÀÎ ¹è¿­ a¿¡¼­ key¿Í °°Àº ¿ä¼Ò¸¦ ÀÌÁø °Ë»ö ÇÕ´Ï´Ù.
+	//ï¿½ï¿½Ú¼ï¿½ï¿½ï¿½ nï¿½ï¿½ ï¿½è¿­ aï¿½ï¿½ï¿½ï¿½ keyï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ ï¿½Õ´Ï´ï¿½.
 	static int binSearch(int[] a, int n, int key) {
-		int pl = 0;							//°Ë»ö ¹üÀ§ÀÇ Ã¹ ÀÎµ¦½º
-		int pr = n -1;						//°Ë»ö ¹üÀ§ÀÇ ³¡ ÀÎµ¦½º
+		int pl = 0;							//ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã¹ ï¿½Îµï¿½ï¿½ï¿½
+		int pr = n -1;						//ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½
 		
 		do {
-			int pc = (pl + pr) / 2;			//Áß¾Ó ¿ä¼ÒÀÇ ÀÎµ¦½º
+			int pc = (pl + pr) / 2;			//ï¿½ß¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Îµï¿½ï¿½ï¿½
 			if(a[pc] == key) {
-				return pc;					//°Ë»ö ¼º°ø!
+				return pc;					//ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½!
 			}else if(a[pc] < key) {
-				pl = pc + 1 ;				//°Ë»ö ¹üÀ§¸¦ µÚÂÊ Àý¹ÝÀ¸·Î Á¼Èû
+				pl = pc + 1 ;				//ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			}else {
-				pr = pc -1;					//°Ë»ö ¹üÀ§¸¦ ¾ÕÂÊ Àý¹ÝÀ¸·Î Á¼Èû
+				pr = pc -1;					//ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			}
 		}while(pl <= pr);
 		
-		return -1;							//°Ë»ö ½ÇÆÐ!	
+		return -1;							//ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½!	
 	}
 	
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 		
-		System.out.print("¿ä¼Ú¼ö : ");
+		System.out.print("ï¿½ï¿½Ú¼ï¿½ : ");
 		int num = stdIn.nextInt();
-		int[] x = new int[num];				//¿ä¼Ú¼ö°¡ numÀÎ ¹è¿­
+		int[] x = new int[num];				//ï¿½ï¿½Ú¼ï¿½ï¿½ï¿½ numï¿½ï¿½ ï¿½è¿­
 		
-		System.out.println("¿À¸§Â÷¼øÀ¸·Î ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
 		
-		System.out.print("x[0] : ");		//Ã¹ ¿ä¼Ò ÀÔ·Â
+		System.out.print("x[0] : ");		//Ã¹ ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½
 		x[0] = stdIn.nextInt();
 		
 		for(int i = 1; i < num; i++) {
@@ -42,18 +42,18 @@ public class Ex3_4_BinSearch {
 				System.out.print("x["+ i + "] : ");
 				x[i] = stdIn.nextInt();
 				
-			}while (x[i] < x[i-1]);			//¹Ù·Î ¾ÕÀÇ ¿ä¼Òº¸´Ù ÀÛÀ¸¸é ´Ù½Ã ÀÔ·Â
+			}while (x[i] < x[i-1]);			//ï¿½Ù·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Òºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½Ô·ï¿½
 		}
 		
-		System.out.print("°Ë»öÇÒ °ª : ");		//Å° °ªÀ» ÀÔ·Â
+		System.out.print("ï¿½Ë»ï¿½ï¿½ï¿½ ï¿½ï¿½ : ");		//Å° ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½
 		int ky = stdIn.nextInt();
 		
-		int idx =  binSearch(x, num, ky);	//¹è¿­ x¿¡¼­ Å° °ªÀÌ kyÀÎ ¿ä¼Ò¸¦ °Ë»ö
+		int idx =  binSearch(x, num, ky);	//ï¿½è¿­ xï¿½ï¿½ï¿½ï¿½ Å° ï¿½ï¿½ï¿½ï¿½ kyï¿½ï¿½ ï¿½ï¿½Ò¸ï¿½ ï¿½Ë»ï¿½
 		
 		if(idx == -1) {
-			System.out.println("±× °ªÀÇ ¿ä¼Ò°¡ ¾ø½À´Ï´Ù.");
+			System.out.println("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 		}else {
-			System.out.println(ky + "Àº(´Â) x["+ idx + "]¿¡ ÀÖ½À´Ï´Ù.");
+			System.out.println(ky + "ï¿½ï¿½(ï¿½ï¿½) x["+ idx + "]ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.");
 		}
 	}
 

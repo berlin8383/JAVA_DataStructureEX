@@ -1,7 +1,7 @@
 /*
- * 2Çà 4¿­ÀÇ 2Â÷¿ø ¹è¿­
+ * 2ï¿½ï¿½ 4ï¿½ï¿½ï¿½ï¿½ 2ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­
  */
-package com.berlin83.chap02;
+package chap02;
 
 public class Ex2_12_Int2DArray {
 

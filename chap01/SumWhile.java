@@ -1,6 +1,6 @@
-package com.berlin83.chap01;
+package chap01;
 /*
- * 1╨нем n╠НаЖюг а╓╪Ж гу ╠╦го╠Б
+ * 1О©╫О©╫О©╫О©╫ nО©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫о╠О©╫
  */
 
 import java.util.Scanner;
@@ -11,18 +11,18 @@ public class SumWhile {
 		// TODO Auto-generated method stub
 		Scanner stdIn = new Scanner(System.in);
 		
-		System.out.println("1╨нем n╠НаЖюг гую╩ ╠╦гу╢о╢ы.");
-		System.out.println("nюг ╟╙ : ");
+		System.out.println("1О©╫О©╫О©╫О©╫ nО©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫у╢о╢О©╫.");
+		System.out.println("nО©╫О©╫ О©╫О©╫ : ");
 		int n = stdIn.nextInt();
 		
-		int sum = 0; //гу
+		int sum = 0; //О©╫О©╫
 		int i =1;
 		
-		while(i<=n) { //i╟║ nюлго╦И ╧щ╨╧гу╢о╢ы.
-			sum +=i;	//sum©║ i╦╕ ╢Угу╢о╢ы.
-			i++;		//i╟╙ю╩ 1╦╦е╜ аУ╟║╫це╣╢о╢ы.
+		while(i<=n) { //iО©╫О©╫ nО©╫О©╫О©╫о╦О©╫ О©╫щ╨О©╫О©╫у╢о╢О©╫.
+			sum +=i;	//sumО©╫О©╫ iО©╫О©╫ О©╫О©╫О©╫у╢о╢О©╫.
+			i++;		//iО©╫О©╫О©╫О©╫ 1О©╫О©╫е╜ О©╫О©╫О©╫О©╫О©╫О©╫е╣О©╫о╢О©╫.
 		}
-		System.out.println("1╨нем "+n+"╠НаЖюг гую╨ "+sum+"ют╢о╢ы.");
+		System.out.println("1О©╫О©╫О©╫О©╫ "+n+"О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ "+sum+"О©╫т╢о╢О©╫.");
 		
 		stdIn.close();
 	}

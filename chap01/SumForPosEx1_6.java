@@ -1,9 +1,9 @@
-package com.berlin83.chap01;
+package chap01;
 
 import java.util.Scanner;
 
 /*
- * 1,2,... ,nюг гую╩ ╠╦гу╢о╢ы.(╬Г╪Ж╦╦ ют╥б).
+ * 1,2,... ,nО©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫у╢о╢О©╫.(О©╫О©╫О©╫О©╫О©╫ О©╫т╥О©╫).
  */
 
 public class SumForPosEx1_6 {
@@ -15,10 +15,10 @@ public class SumForPosEx1_6 {
 		
 		int n;
 		
-		System.out.println("1╨нем n╠НаЖюг гую╩ ╠╦гу╢о╢ы.");
+		System.out.println("1О©╫О©╫О©╫О©╫ nО©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫у╢о╢О©╫.");
 		
 		do {
-			System.out.print("nюг ╟╙ : ");
+			System.out.print("nО©╫О©╫ О©╫О©╫ : ");
 			n=stdIn.nextInt();
 			
 		}while(n<=0);

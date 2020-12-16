@@ -1,4 +1,4 @@
-package com.berlin83.chap01;
+package chap01;
 
 import java.util.Scanner;
 
@@ -25,15 +25,15 @@ public class Median {
 		// TODO Auto-generated method stub
 		Scanner stdIn = new Scanner(System.in);
 		
-		System.out.println("¼¼ Á¤¼öÀÇ Áß¾Ó°ªÀ» ±¸ÇÕ´Ï´Ù.");
-		System.out.println("aÀÇ °ª : ");
+		System.out.println("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß¾Ó°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½.");
+		System.out.println("aï¿½ï¿½ ï¿½ï¿½ : ");
 		int a = stdIn.nextInt();
-		System.out.println("bÀÇ °ª : ");
+		System.out.println("bï¿½ï¿½ ï¿½ï¿½ : ");
 		int b = stdIn.nextInt();
-		System.out.println("cÀÇ °ª : ");
+		System.out.println("cï¿½ï¿½ ï¿½ï¿½ : ");
 		int c = stdIn.nextInt();
 		
-		System.out.println("Áß¾Ó°ªÀº" +med3(a,b,c)+"ÀÔ´Ï´Ù.");
+		System.out.println("ï¿½ß¾Ó°ï¿½ï¿½ï¿½" +med3(a,b,c)+"ï¿½Ô´Ï´ï¿½.");
 
 		stdIn.close();
 	}

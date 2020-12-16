@@ -1,30 +1,30 @@
-package com.berlin83.chap02;
+package chap02;
 
 import java.util.Scanner;
 
 /*
- * ±× ÇØ °æ°ú ÀÏ ¼ö¸¦ ±¸ÇÕ´Ï´Ù.
+ * ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
  */
 
 public class Ex2_13_DayOfYear {
 	
-	//°¢ ´ÞÀÇ ÀÏ ¼ö
+	//ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½
 	static int[][] mdays = {
-			{31,28,31,30,31,30,31,31,30,31,30,31}, //Æò³â
-			{31,29,31,30,31,30,31,31,30,31,30,31}, //À±³â
+			{31,28,31,30,31,30,31,31,30,31,30,31}, //ï¿½ï¿½ï¿½
+			{31,29,31,30,31,30,31,31,30,31,30,31}, //ï¿½ï¿½ï¿½ï¿½
 	};
 	
-	//¼­±â year³âÀº À±³âÀÎ°¡?(À±³â:1/Æò³â:0)
+	//ï¿½ï¿½ï¿½ï¿½ yearï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Î°ï¿½?(ï¿½ï¿½ï¿½ï¿½:1/ï¿½ï¿½ï¿½:0)
 	
 	static int isLeap(int year) {
 		return (year % 4 == 0 && year % 100 != 0 || year % 400 == 0 ) ? 1 : 0;
 	}
 	
-	//¼­±â y³â m¿ù dÀÏÀÇ ±× ÇØ °æ°ú ÀÏ ¼ö¸¦ ±¸ÇÔ
+	//ï¿½ï¿½ï¿½ï¿½ yï¿½ï¿½ mï¿½ï¿½ dï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	static int dayOfYear(int y, int m, int d) {
-		int days = d;							//ÀÏ ¼ö
+		int days = d;							//ï¿½ï¿½ ï¿½ï¿½
 		
-		for(int i = 1 ; i < m ; i++ ) {			//1¿ù ~(m-1)¿ùÀÇ ÀÏ ¼ö¸¦ ´õÇÔ
+		for(int i = 1 ; i < m ; i++ ) {			//1ï¿½ï¿½ ~(m-1)ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 			days += mdays[isLeap(y)][i-1];
 			
 		}
@@ -33,18 +33,18 @@ public class Ex2_13_DayOfYear {
 	
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
-		int retry;								//´Ù½Ã ÇÑ¹ø?
+		int retry;								//ï¿½Ù½ï¿½ ï¿½Ñ¹ï¿½?
 		
-		System.out.println("±× ÇØ °æ°ú ÀÏ¼ö¸¦ ±¸ÇÕ´Ï´Ù.");
+		System.out.println("ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½Ï¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Õ´Ï´ï¿½.");
 		
 		do {
-			System.out.print("³â : "); int year = stdIn.nextInt(); //³â
-			System.out.print("¿ù : "); int month = stdIn.nextInt(); //¿ù
-			System.out.print("ÀÏ : "); int day = stdIn.nextInt(); //ÀÏ
+			System.out.print("ï¿½ï¿½ : "); int year = stdIn.nextInt(); //ï¿½ï¿½
+			System.out.print("ï¿½ï¿½ : "); int month = stdIn.nextInt(); //ï¿½ï¿½
+			System.out.print("ï¿½ï¿½ : "); int day = stdIn.nextInt(); //ï¿½ï¿½
 			
-			System.out.printf("±× ÇØ %d ÀÏÂ°ÀÔ´Ï´Ù.\n" , dayOfYear(year, month, day));
+			System.out.printf("ï¿½ï¿½ ï¿½ï¿½ %d ï¿½ï¿½Â°ï¿½Ô´Ï´ï¿½.\n" , dayOfYear(year, month, day));
 			
-			System.out.print("ÇÑ ¹ø ´õ ÇÒ±î¿ä? (1. ¿¹ / 0. ¾Æ´Ï¿À) : ");
+			System.out.print("ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ò±ï¿½ï¿½? (1. ï¿½ï¿½ / 0. ï¿½Æ´Ï¿ï¿½) : ");
 			retry = stdIn.nextInt();
 			
 		}while(retry==1);

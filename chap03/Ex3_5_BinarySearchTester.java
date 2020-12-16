@@ -1,47 +1,47 @@
 /*
- * ±âº» ÀÚ·áÇü ¹è¿­¿¡¼­ binarySearch ¸Þ¼­µå·Î °Ë»öÇÏ±â
- * Ç¥ 3-3ÀÇ binarySearch ¸Þ¼­µå´Â int ÇüÀÌ³ª longÇü°ú °°Àº ±âº»ÀÚ·áÇü
- * ¹è¿­¿¡¼­ ÀÌÁø °Ë»öÀ» ÇÏ´Â ¸Þ¼­µå ÀÔ´Ï´Ù.int Çü ¹è¿­¿¡¼­ ÀÌ ¸Þ¼­µå¸¦ »ç¿ë
- * ÇÏ´Â ¹æ¹ýÀº ´ÙÀ½°ú °°½À´Ï´Ù.
+ * ï¿½âº» ï¿½Ú·ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ï¿½ï¿½ binarySearch ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ï¿½Ï±ï¿½
+ * Ç¥ 3-3ï¿½ï¿½ binarySearch ï¿½Þ¼ï¿½ï¿½ï¿½ï¿½ int ï¿½ï¿½ï¿½Ì³ï¿½ longï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½âº»ï¿½Ú·ï¿½ï¿½ï¿½
+ * ï¿½è¿­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½ ï¿½Ô´Ï´ï¿½.int ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Þ¼ï¿½ï¿½å¸¦ ï¿½ï¿½ï¿½
+ * ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.
  */
 
-package com.berlin83.chap03;
+package chap03;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-//Arrays.binarySearch·Î ÀÌÁø °Ë»ö
+//Arrays.binarySearchï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½
 
 public class Ex3_5_BinarySearchTester {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 		
-		System.out.print("¿ä¼Ú¼ö : ");
+		System.out.print("ï¿½ï¿½Ú¼ï¿½ : ");
 		int num = stdIn.nextInt();
-		int []x = new int[num];				//¿ä¼Ú¼ö°¡ numÀÎ ¹è¿­
+		int []x = new int[num];				//ï¿½ï¿½Ú¼ï¿½ï¿½ï¿½ numï¿½ï¿½ ï¿½è¿­
 		
-		System.out.println("¿À¸§Â÷¼øÀ¸·Î ÀÔ·ÂÇÏ¼¼¿ä");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½");
 		
-		System.out.print("x[0] : ");		//¹è¿­ÀÇ Ã¹ ¿ä¼Ò¸¦ ¸ÕÀú ÀÔ·ÂÇÕ´Ï´Ù.
+		System.out.print("x[0] : ");		//ï¿½è¿­ï¿½ï¿½ Ã¹ ï¿½ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ï¿½Õ´Ï´ï¿½.
 		x[0] = stdIn.nextInt();
 		
 		for(int i = 1; i < num ; i++) {
 			do {
 				System.out.print("x[" + i + "] : ");
 				x[i] = stdIn.nextInt();
-			}while(x[i] < x[i-1]);			//¹Ù·Î ¾ÕÀÇ ¿ä¼Òº¸´Ù ÀÛÀ¸¸é ´Ù½Ã ÀÔ·ÂÇÕ´Ï´Ù.
+			}while(x[i] < x[i-1]);			//ï¿½Ù·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Òºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½Ô·ï¿½ï¿½Õ´Ï´ï¿½.
 			
 		}
 		
-		System.out.print("°Ë»öÇÒ °ª : ");		//Å° °ªÀ» ÀÔ·Â¹ÞÀ½
+		System.out.print("ï¿½Ë»ï¿½ï¿½ï¿½ ï¿½ï¿½ : ");		//Å° ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·Â¹ï¿½ï¿½ï¿½
 		int ky = stdIn.nextInt();
 		
-		int idx = Arrays.binarySearch(x, ky);	//¹è¿­ x¿¡¼­ Å° °ªÀÌ kyÀÎ ¿ä¼Ò¸¦ °Ë»ö
+		int idx = Arrays.binarySearch(x, ky);	//ï¿½è¿­ xï¿½ï¿½ï¿½ï¿½ Å° ï¿½ï¿½ï¿½ï¿½ kyï¿½ï¿½ ï¿½ï¿½Ò¸ï¿½ ï¿½Ë»ï¿½
 		
 		if(idx <0) {
-			System.out.println("±× °ªÀÇ ¿ä¼Ò°¡ ¾ø½À´Ï´Ù.");
+			System.out.println("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ò°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 		}else {
-			System.out.println(ky + "Àº(´Â) x[" + idx + "]¿¡ ÀÖ½À´Ï´Ù.");
+			System.out.println(ky + "ï¿½ï¿½(ï¿½ï¿½) x[" + idx + "]ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.");
 		}
 	}
 

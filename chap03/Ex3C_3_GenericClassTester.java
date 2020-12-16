@@ -1,22 +1,22 @@
-package com.berlin83.chap03;
+package chap03;
 /*
- * Á¦³×¸¯ Å¬·¡½º¸¦±¸ÇöÇÑ ÇÁ·Î±×·¥
+ * ï¿½ï¿½ï¿½×¸ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î±×·ï¿½
  */
 class Ex3C_3_GenericClassTester {
-	//Á¦³×¸¯ Å¬·¡½ºÀÇ ÆÄ¶ó¹ÌÅÍ¸¦ T¶ó°í ÀÛ¼ºÇÕ´Ï´Ù.
+	//ï¿½ï¿½ï¿½×¸ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¶ï¿½ï¿½ï¿½Í¸ï¿½ Tï¿½ï¿½ï¿½ ï¿½Û¼ï¿½ï¿½Õ´Ï´ï¿½.
 	static class GenericClass<T>{
 		private T xyz;
-		GenericClass(T t){			//»ý¼ºÀÚ
+		GenericClass(T t){			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			this.xyz = t;
 		}
 		
-		T getXyz() {				//xyz¸¦ ¹ÝÈ¯ÇÕ´Ï´Ù.
+		T getXyz() {				//xyzï¿½ï¿½ ï¿½ï¿½È¯ï¿½Õ´Ï´ï¿½.
 			return xyz;
 		}
 	}
 	
 	public static void main(String[] args) {
-		//´ÙÀ½°ú °°ÀÌ ÆÄ¶ó¹ÌÅÍ¿¡ StringÀ» ³Ñ±æ ¼öµµ ÀÖ°í Integer¸¦ ³Ñ±æ ¼öµµ ÀÖ½À´Ï´Ù.
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ä¶ï¿½ï¿½ï¿½Í¿ï¿½ Stringï¿½ï¿½ ï¿½Ñ±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö°ï¿½ Integerï¿½ï¿½ ï¿½Ñ±ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
 		GenericClass<String> s = new GenericClass<String>("ABC");
 		GenericClass<Integer> n = new GenericClass<Integer>(15);
 		

@@ -1,6 +1,6 @@
-package com.berlin83.chap03;
+package chap03;
 /*
- * ½ÅÃ¼°Ë»ç µ¥ÀÌÅÍ ¹è¿­¿¡¼­ ÀÌÁø °Ë»öÇÏ±â
+ * ï¿½ï¿½Ã¼ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½è¿­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ï¿½Ï±ï¿½
  */
 
 import java.util.Arrays;
@@ -8,11 +8,11 @@ import java.util.Comparator;
 import java.util.Scanner;
 
 class Ex3_8_PhysExamSearch {
-	// ½ÅÃ¼°Ë»ç µ¥ÀÌÅÍ¸¦ Á¤ÀÇ ÇÕ´Ï´Ù.
+	// ï¿½ï¿½Ã¼ï¿½Ë»ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Õ´Ï´ï¿½.
 	static class PhyscData{
-		private String 	name;			//ÀÌ¸§
+		private String 	name;			//ï¿½Ì¸ï¿½
 		private int 	height;			//Å°
-		private double	vision;			//½Ã·Â
+		private double	vision;			//ï¿½Ã·ï¿½
 		
 		public PhyscData(String name, int height, double vision) {
 			// TODO Auto-generated constructor stub
@@ -21,12 +21,12 @@ class Ex3_8_PhysExamSearch {
 			this.vision = vision;
 		}
 		
-		//¹®ÀÚ¿­À» ¹ÝÈ¯ÇÏ´Â ¸Þ¼­µå(Á¤º¸ È®ÀÎ¿ë)
+		//ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ ï¿½ï¿½È¯ï¿½Ï´ï¿½ ï¿½Þ¼ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ È®ï¿½Î¿ï¿½)
 		public String toString() { 
 			return name + " " + height+ " "+ vision;
 		}
 		
-		//¿À¸§Â÷¼øÀ¸·Î Á¤·ÄÇÏ±â À§ÇÑ comparator
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ comparator
 		public static final Comparator<PhyscData> HEIGHT_ORDER = new HeightOrderComparator();
 		
 		private static class HeightOrderComparator implements Comparator<PhyscData>{
@@ -40,27 +40,27 @@ class Ex3_8_PhysExamSearch {
 	
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
-		PhyscData[] x = {							//Å°ÀÇ ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾îÀÖ½À´Ï´Ù.
-				new PhyscData("ÀÌ³ª·É", 162, 0.3),
-				new PhyscData("À¯ÁöÈÆ", 168, 0.4),
-				new PhyscData("±èÇÑ°á", 169, 0.8),
-				new PhyscData("È«ÁØ±â", 171, 1.5),
-				new PhyscData("Àü¼­Çö", 173, 0.7),
-				new PhyscData("ÀÌÈ£¿¬", 174, 1.2),
-				new PhyscData("ÀÌ¼ö¹Î", 175, 2.0),
+		PhyscData[] x = {							//Å°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ÄµÇ¾ï¿½ï¿½Ö½ï¿½ï¿½Ï´ï¿½.
+				new PhyscData("ï¿½Ì³ï¿½ï¿½ï¿½", 162, 0.3),
+				new PhyscData("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", 168, 0.4),
+				new PhyscData("ï¿½ï¿½ï¿½Ñ°ï¿½", 169, 0.8),
+				new PhyscData("È«ï¿½Ø±ï¿½", 171, 1.5),
+				new PhyscData("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", 173, 0.7),
+				new PhyscData("ï¿½ï¿½È£ï¿½ï¿½", 174, 1.2),
+				new PhyscData("ï¿½Ì¼ï¿½ï¿½ï¿½", 175, 2.0),
 		};
-		System.out.print("¸î cmÀÎ »ç¶÷À» Ã£°í ÀÖ³ª¿ä ? :");
-		int height = stdIn.nextInt();				//Å° °ª ÀÔ·Â
-		int idx = Arrays.binarySearch(x, 								//¹è¿­ x¿¡¼­
-									  new PhyscData("", height, 0.0),	//Å°°¡ heightÀÎ ¿ä¼Ò¸¦
-									  PhyscData.HEIGHT_ORDER			//HEIGHT_ORDER¿¡ ÀÇÇØ °Ë»ö
+		System.out.print("ï¿½ï¿½ cmï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½Ö³ï¿½ï¿½ï¿½ ? :");
+		int height = stdIn.nextInt();				//Å° ï¿½ï¿½ ï¿½Ô·ï¿½
+		int idx = Arrays.binarySearch(x, 								//ï¿½è¿­ xï¿½ï¿½ï¿½ï¿½
+									  new PhyscData("", height, 0.0),	//Å°ï¿½ï¿½ heightï¿½ï¿½ ï¿½ï¿½Ò¸ï¿½
+									  PhyscData.HEIGHT_ORDER			//HEIGHT_ORDERï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½
 									  );
 		
 		if(idx < 0) {
-			System.out.println("¿ä¼Ò°¡ ¾ø½À´Ï´Ù.");
+			System.out.println("ï¿½ï¿½Ò°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½.");
 		}else {
-			System.out.println("x["+idx+"]¿¡ ÀÖ½À´Ï´Ù.");
-			System.out.println("Ã£Àº µ¥ÀÌÅÍ : " + x[idx]);
+			System.out.println("x["+idx+"]ï¿½ï¿½ ï¿½Ö½ï¿½ï¿½Ï´ï¿½.");
+			System.out.println("Ã£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : " + x[idx]);
 		}
 	}
 }
