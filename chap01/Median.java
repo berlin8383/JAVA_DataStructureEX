@@ -22,7 +22,6 @@ public class Median {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner stdIn = new Scanner(System.in);
 		
 		System.out.println("�� ������ �߾Ӱ��� ���մϴ�.");

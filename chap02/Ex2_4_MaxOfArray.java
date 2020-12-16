@@ -20,7 +20,6 @@ public class Ex2_4_MaxOfArray {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in); 
 		
 		System.out.println("Ű�� �ִ��� ���մϴ�.");

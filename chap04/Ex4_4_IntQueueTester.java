@@ -35,7 +35,6 @@ public class Ex4_4_IntQueueTester {
 					x = s.deque();
 					System.out.println("��ť�� �����ʹ� " + x + "�Դϴ�.");
 				} catch (Ex4_3A_IntQueue.OverflowIntQueueException e) {
-					// TODO: handle exception
 					System.out.println("ť�� ��� �ֽ��ϴ�.");
 				}
 				break;
@@ -46,7 +45,6 @@ public class Ex4_4_IntQueueTester {
 					x = s.peek();
 					System.out.println("��ũ�� �����ʹ� "+x+"�Դϴ�.");
 				} catch (Ex4_3A_IntQueue.OverflowIntQueueException e) {
-					// TODO: handle exception
 					System.out.println("ť�� ��� �ֽ��ϴ�.");
 				}
 				break;

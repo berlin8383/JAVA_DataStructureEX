@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class SumForEx1_5 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		@SuppressWarnings("resource")
 		Scanner stdIn = new Scanner(System.in);
 		

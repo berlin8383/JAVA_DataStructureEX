@@ -11,7 +11,6 @@ package chap01;
 public class Ex1_7_2Multi99Table {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		System.out.println("-------����ǥ-----");
 		
 		for(int i = 1; i <= 9; i++) {

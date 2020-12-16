@@ -12,7 +12,6 @@ public class Ex1_8TriangleLB {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner stdIn = new Scanner(System.in);
 		int n;
 		

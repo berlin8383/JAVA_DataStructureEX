@@ -26,7 +26,6 @@ public class Ex4_2_IntStackTester {
 				try {
 					s.push(x);
 				}catch (Ex4_1E_IntStack.OverflowItStackException e) {
-					// TODO: handle exception
 					System.out.println("������ ���� á���ϴ�.");
 				}
 				break;
@@ -36,7 +35,6 @@ public class Ex4_2_IntStackTester {
 					x=s.pop();
 					System.out.println("���� �����ʹ� " + x + "�Դϴ�.");
 				} catch (Ex4_1E_IntStack.OverflowItStackException e) {
-					// TODO: handle exception
 					System.out.println("������ ��� �ֽ��ϴ�.");
 				}
 				break;
@@ -45,7 +43,6 @@ public class Ex4_2_IntStackTester {
 					x = s.peek();
 					System.out.println("��ũ�� �����ʹ� "+x+"�Դϴ�.");
 				} catch (Ex4_1E_IntStack.OverflowItStackException e) {
-					// TODO: handle exception
 					System.out.println("������ ��� �ֽ��ϴ�.");
 				}
 				break;

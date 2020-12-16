@@ -15,7 +15,6 @@ class Ex3_8_PhysExamSearch {
 		private double	vision;			//�÷�
 		
 		public PhyscData(String name, int height, double vision) {
-			// TODO Auto-generated constructor stub
 			this.name = name;
 			this.height = height;
 			this.vision = vision;

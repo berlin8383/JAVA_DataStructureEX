@@ -8,7 +8,6 @@ package chap02;
 public class Ex2_1_IntArray {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		int[] a = new int[5];//�迭�� ����
 		

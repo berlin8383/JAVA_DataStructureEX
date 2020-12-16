@@ -9,7 +9,6 @@ package chap02;
 public class Ex2_3_CloneArray {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		int[] a = { 1, 2, 3, 4, 5 };
 		int[] b = a.clone(); // b�� a�� ������ ����

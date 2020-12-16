@@ -25,7 +25,6 @@ public class Median13 {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
 		System.out.println("medien(3,2,1)" + median(3, 2, 1));
 		System.out.println("medien(3,2,2)" + median(3,2,2));

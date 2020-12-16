@@ -32,7 +32,6 @@ public class Ex4_1C_IntStack {
 	
 	//������
 	public Ex4_1C_IntStack(int capacity) {
-		// TODO Auto-generated constructor stub
 		ptr = 0;
 		max = capacity;
 		try {

@@ -9,7 +9,6 @@ package chap02;
 public class Ex2_2_IntArrayInit {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int[] a = {1,2,3,4,5}; //�迭 �ʱ��ڿ� ���� ����
 		
 		for(int i =0; i <a.length; i++)

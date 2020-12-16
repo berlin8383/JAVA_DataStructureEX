@@ -12,7 +12,6 @@ public class Med3 {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 		System.out.println("med3(3,2,1)" + med3(3, 2, 1));
 		System.out.println("med3(3,2,2)" + med3(3, 2, 2));

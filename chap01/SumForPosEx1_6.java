@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class SumForPosEx1_6 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		@SuppressWarnings("resource")
 		Scanner stdIn = new Scanner(System.in);
 		

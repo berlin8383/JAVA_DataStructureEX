@@ -8,7 +8,6 @@ import java.util.Scanner;
 public class SumWhile {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner stdIn = new Scanner(System.in);
 		
 		System.out.println("1���� n������ ���� ���մϴ�.");
