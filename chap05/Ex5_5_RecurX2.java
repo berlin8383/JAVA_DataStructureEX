@@ -1,8 +1,8 @@
-package com.berlin83.chap05;
+package chap05;
 
 import java.util.Scanner;
 
-import com.berlin83.chap04.Ex4_1E_IntStack;
+import chap04.Ex4_1E_IntStack;
 
 /*
  * 재귀 알고리즘의 분석

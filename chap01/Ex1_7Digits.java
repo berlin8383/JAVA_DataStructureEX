@@ -14,7 +14,6 @@ import java.util.Scanner;
 public class Ex1_7Digits {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		@SuppressWarnings("resource")
 		Scanner stdIn = new Scanner(System.in);
 		int no;

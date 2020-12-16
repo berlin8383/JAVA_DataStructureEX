@@ -3,7 +3,7 @@
  * 은 9*8!로 구할수 있습니다. 위의 정의를 그대로 프로그램으로 구현하면 실습
  * 5-1의 factorial메서드와 같습니다.
  */
-package com.berlin83.chap05;
+package chap05;
 
 import java.util.Scanner;
 
