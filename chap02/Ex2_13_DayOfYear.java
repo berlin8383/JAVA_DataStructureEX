@@ -48,6 +48,7 @@ public class Ex2_13_DayOfYear {
 			retry = stdIn.nextInt();
 			
 		}while(retry==1);
+		stdIn.close();
 	}
 
 }

@@ -47,5 +47,6 @@ public class Ex3_1_SeqSearch {
 		}else {
 			System.out.println(ky + "��(��) x["+ idx + "]�� �ֽ��ϴ�.");
 		}
+		stdIn.close();
 	}
 }

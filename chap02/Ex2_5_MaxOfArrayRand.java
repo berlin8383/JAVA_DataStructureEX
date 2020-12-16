@@ -45,6 +45,8 @@ public class Ex2_5_MaxOfArrayRand {
 		
 		System.out.println("�ִ��� " + maxOf(height)+"�Դϴ�.");
 
+		stdIn.close();
+
 	}
 
 }

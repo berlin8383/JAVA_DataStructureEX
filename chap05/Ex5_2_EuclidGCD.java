@@ -23,6 +23,8 @@ public class Ex5_2_EuclidGCD {
 		System.out.print("y정수를 입력하세요 : "); int y = stdIn.nextInt();
 		
 		System.out.println("최대공약수는 "+gcd(x, y)+"입니다.");
+
+		stdIn.close();
 		
 	}
 

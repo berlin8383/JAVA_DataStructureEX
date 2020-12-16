@@ -10,12 +10,24 @@ public class Ex4_1C_IntStack {
 	
 	//���� �� ���� : ������ �������
 	public class EmptyIntStackException extends RuntimeException {
-		public EmptyIntStackException() {}		
+		/**
+		 *
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public EmptyIntStackException() {
+		}
 	}
 	
 	//���� �� ���� : ������ ������
 	public class OverflowItStackException extends RuntimeException{
-		public OverflowItStackException() {}
+		/**
+		 *
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public OverflowItStackException() {
+		}
 	}
 	
 	//������

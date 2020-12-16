@@ -40,7 +40,7 @@ public class Ex3_6_StringBinarySearch {
 		}else {
 			System.out.println("�ش� Ű����� x["+ idx + "]�� �ֽ��ϴ�.");
 		}
-		
+		stdIn.close();
 		}
 	
 	}

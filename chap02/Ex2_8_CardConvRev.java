@@ -55,6 +55,7 @@ public class Ex2_8_CardConvRev {
 			System.out.print("�� �� �� �ұ��? (1.��/0.�ƴϿ�) : ");
 			retry = stdIn.nextInt();
 		}while(retry == 1);
+		stdIn.close();
 	}
 
 }

@@ -62,6 +62,8 @@ class Ex3_8_PhysExamSearch {
 			System.out.println("x["+idx+"]�� �ֽ��ϴ�.");
 			System.out.println("ã�� ������ : " + x[idx]);
 		}
+
+		stdIn.close();
 	}
 }
 

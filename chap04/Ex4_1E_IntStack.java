@@ -3,8 +3,6 @@ package chap04;
  * int�� ����
  */
 
-import chap04.Ex4_1C_IntStack.EmptyIntStackException;
-
 public class Ex4_1E_IntStack {
 	private int max;			//���� �뷮
 	private int ptr;			//���� ������
@@ -12,12 +10,24 @@ public class Ex4_1E_IntStack {
 	
 	//���� �� ���� : ������ �������
 	public class EmptyIntStackException extends RuntimeException {
-		public EmptyIntStackException() {}		
+		/**
+		 *
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public EmptyIntStackException() {
+		}
 	}
 	
 	//���� �� ���� : ������ ������
 	public class OverflowItStackException extends RuntimeException{
-		public OverflowItStackException() {}
+		/**
+		 *
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public OverflowItStackException() {
+		}
 	}
 	
 	//������

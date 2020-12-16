@@ -35,6 +35,7 @@ public class Ex2_4_MaxOfArray {
 		}
 		
 		System.out.println("�ִ��� "+maxOf(height)+"�Դϴ�.");
+		scanner.close();
 
 	}
 

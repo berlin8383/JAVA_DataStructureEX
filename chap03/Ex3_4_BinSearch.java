@@ -55,6 +55,8 @@ public class Ex3_4_BinSearch {
 		}else {
 			System.out.println(ky + "��(��) x["+ idx + "]�� �ֽ��ϴ�.");
 		}
+
+		stdIn.close();
 	}
 
 }

@@ -38,6 +38,8 @@ public class Ex2_6_ReverseArray {
 			System.out.print("x["+i+"] :");
 			x[i] = stdIn.nextInt();
 		}
+
+		stdIn.close();
 		
 		y = x.clone();
 //		y=x;

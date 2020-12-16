@@ -56,5 +56,6 @@ public class Ex4_2_IntStackTester {
 				
 			}
 		}
+		stdIn.close();
 	}
 }

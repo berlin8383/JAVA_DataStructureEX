@@ -27,5 +27,7 @@ public class Ex5_4_RecurX1 {
 		int x = stdIn.nextInt();
 		
 		recur(x);
+
+		stdIn.close();
 	}
 }

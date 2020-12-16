@@ -12,12 +12,24 @@ public class Ex4_3A_IntQueue {
 	
 	//���� �� ���� : ť�� ��� ����
 	public class EmptyIntQueueException extends RuntimeException{
-		public EmptyIntQueueException() {}
+		/**
+		 *
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public EmptyIntQueueException() {
+		}
 	}
 	
 	//���� �� ���� : ť�� ���� ��
 	public class OverflowIntQueueException extends RuntimeException{
-		public OverflowIntQueueException() {}
+		/**
+		 *
+		 */
+		private static final long serialVersionUID = 1L;
+
+		public OverflowIntQueueException() {
+		}
 	}
 	
 	//������
@@ -27,7 +39,7 @@ public class Ex4_3A_IntQueue {
 		try {
 			que = new int[max];			//ť ��ü�� �迭�� ����
 		} catch (OutOfMemoryError e) { //������ �� ����
-			// TODO: handle exception
+			
 			max = 0;
 		}
 	}

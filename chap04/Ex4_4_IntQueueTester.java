@@ -24,7 +24,7 @@ public class Ex4_4_IntQueueTester {
 				try {
 					s.enque(x);
 				} catch (Ex4_3A_IntQueue.OverflowIntQueueException e) {
-					// TODO: handle exception
+					
 					System.out.println("ť�� ���� á���ϴ�.");
 				}
 				
@@ -56,5 +56,7 @@ public class Ex4_4_IntQueueTester {
 				break;
 			}
 		}
+
+		stdIn.close();
 	}
 }

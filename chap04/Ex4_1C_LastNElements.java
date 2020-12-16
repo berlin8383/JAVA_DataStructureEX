@@ -6,7 +6,9 @@ import java.util.Scanner;
 
 public class Ex4_1C_LastNElements {
 	public static void main(String[] args) {
+
 		Scanner stdIn = new Scanner(System.in);
+
 		final int N = 10;
 		int[] a = new int[N];				//입력 받은 값을 저장
 		int cnt = 0;						//입력 받은 개수
@@ -20,8 +22,9 @@ public class Ex4_1C_LastNElements {
 			
 			System.out.print("계속 할까요? (예.1/아니오.0) : ");
 			retry = stdIn.nextInt();
+			
 		}while(retry == 1);
-		
+		stdIn.close();
 		int i = cnt - N;
 		if(i<0) i=0;
 		
@@ -29,5 +32,8 @@ public class Ex4_1C_LastNElements {
 			System.out.printf("%2d번째의 정수 = %d\n", i + 1, a[i % N]);
 			
 		}
+		
+
+		
 	}
 }

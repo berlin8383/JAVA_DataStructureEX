@@ -40,6 +40,8 @@ public class Ex5_5_RecurX2 {
 		System.out.print("정수를 입력하세요");
 		int x = stdIn.nextInt();
 		
+		
 		recur(x);
+		stdIn.close();
 	}
 }

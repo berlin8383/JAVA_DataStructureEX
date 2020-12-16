@@ -47,5 +47,7 @@ public class Ex2_7_ArrayEqual {
 			b[i] = stdIn.nextInt();
 		}
 		System.out.println("�迭 a �� b ��" + (equals(a, b) ? "�����ϴ�." : "���� �ʽ��ϴ�."));
+
+		stdIn.close();
 	}
 }

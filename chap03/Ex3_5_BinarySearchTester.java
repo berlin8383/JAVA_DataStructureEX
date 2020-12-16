@@ -43,6 +43,7 @@ public class Ex3_5_BinarySearchTester {
 		}else {
 			System.out.println(ky + "��(��) x[" + idx + "]�� �ֽ��ϴ�.");
 		}
+		stdIn.close();
 	}
 
 }

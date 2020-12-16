@@ -30,6 +30,8 @@ public class Ex5_6_Hanoi {
 		int n = stdIn.nextInt();
 		
 		move(n, 1, 3);				//1번 기둥의n개의 원반으로 3번 기둥으로 옮김
+
+		stdIn.close();
 	}
 
 }

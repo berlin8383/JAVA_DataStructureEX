@@ -45,5 +45,7 @@ public class Ex3_3_SeqSearchSen {
 		}else {
 			System.out.println(ky + "��(��) x [" + idx + "]�� �ֽ��ϴ�.");
 		}
+
+		stdId.close();
 	}
 }
